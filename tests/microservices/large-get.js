@@ -15,6 +15,8 @@ export let options = {
 };
 
 export default () => {
-    const carsUrl = 'http://localhost/consumptions';
-    http.get(carsUrl);
+    http.batch([
+        ['GET', 'http://localhost/consumptions' ],
+        ['GET', 'http://localhost/cars' ]
+    ]);
 };
