@@ -15,14 +15,6 @@ export let options = {
 };
 
 export default () => {
-    const carsUrl = 'http://localhost:8090/api/cars';
-    const params = {
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    };
-    const car = JSON.stringify({
-        name: "name"
-    });
-    http.post(carsUrl, car, params);
+    const carsUrl = 'http://localhost/api/consumptions';
+    http.get(carsUrl);
 };
