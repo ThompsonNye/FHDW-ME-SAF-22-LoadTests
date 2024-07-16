@@ -8,13 +8,21 @@ export let options = {
         constantRate: {
             executor: 'per-vu-iterations',
             vus: 30,
-            iterations: 10000,
+            iterations: 1000,
             maxDuration: '1h',
         }
     }
 };
 
 export default () => {
-    const carsUrl = 'http://localhost:8090/api/cars';
-    http.get(carsUrl);
+    const carsUrl = 'http://localhost/api/cars';
+    const params = {
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    };
+    const car = JSON.stringify({
+        name: "name"
+    });
+    http.post(carsUrl, car, params);
 };

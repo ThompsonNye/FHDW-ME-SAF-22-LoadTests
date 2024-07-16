@@ -8,13 +8,13 @@ export let options = {
         constantRate: {
             executor: 'per-vu-iterations',
             vus: 30,
-            iterations: 1000,
+            iterations: 10000,
             maxDuration: '1h',
         }
     }
 };
 
 export default () => {
-    const carsUrl = 'http://localhost:8090/api/cars';
+    const carsUrl = 'http://localhost/consumptions';
     http.get(carsUrl);
 };

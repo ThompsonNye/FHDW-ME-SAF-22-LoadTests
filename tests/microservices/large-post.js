@@ -15,7 +15,7 @@ export let options = {
 };
 
 export default () => {
-    const carsUrl = 'http://localhost:8090/api/cars';
+    const carsUrl = 'http://localhost/cars';
     const params = {
         headers: {
             'Content-Type': 'application/json',
